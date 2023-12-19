@@ -1,7 +1,7 @@
 import cloudinary from 'cloudinary';
 import app from "./app.js";
 import connectionToDB from "./Connect/db.js";
-const PORT =process.env.PORT || 7001;
+const PORT = process.env.PORT || 7001;
 
 import {config} from 'dotenv';
 config();
