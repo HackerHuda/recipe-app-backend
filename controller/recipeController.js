@@ -45,7 +45,7 @@ const createRecipe=async(req,res)=>{
         });
     
         const result = await cloudinary.v2.uploader.upload(req.file.path, {
-            folder: 'lmk',
+            folder: 'uploads',
             width: 250,
             height: 250,
             gravity: 'faces', // This option tells cloudinary to center the image around detected faces (if any) after cropping or resizing the original image
@@ -172,7 +172,7 @@ const updateRecipe = async (req, res, next) => {
       // Upload the new image to Cloudinary
       try {
         const result = await cloudinary.v2.uploader.upload(req.file.path, {
-          folder: 'lms',
+          folder: 'uploads',
           width: 250,
           height: 250,
           gravity: 'faces',
